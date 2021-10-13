@@ -5,7 +5,7 @@ if SERVER then
 
   hook.Add("TTTCanSearchCorpse", "ttt_cdelay_checktime", function(ply, corpse)
     if not GetConVar("ttt_confirmdelay_enable"):GetBool() or GetRoundState() ~= ROUND_ACTIVE or CORPSE.GetFound(corpse, false) then return end
-    if ply:GetBaseRole() == ROLE_DETECTIVE then return end
+    if ply:GetBaseRole() == ROLE_DETECTIVE and GetConVar("ttt_confirmdelay_detective_bypass"):GetBool() then return end
 
     local death_time = corpse.time
     local cur_time = CurTime()
@@ -27,7 +27,7 @@ if CLIENT then
   net.Receive("ttt_cdleay_delay", function()
     local delay_time = net.ReadUInt(16)
 
-    MSTACK:AddColoredMessage(LANG.GetParamTranslation("ttt_cdelay_delaymsg", {delay = delay_time}))
+    MSTACK:AddColoredMessage(LANG.GetParamTranslation("ttt_confdelay_delaymsg", {delay = delay_time}))
 
   end)
 
