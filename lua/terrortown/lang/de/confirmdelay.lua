@@ -9,3 +9,5 @@ L["help_confdelay_menu"] = "Alle Einstellungen für Confirm Delay von @NickCloud
 L["label_confdelay_enabled"] = "Aktiviere confirm delay?"
 L["label_confdelay_dete_bypass"] = "Können Detektive die Verzögerung umgehen?"
 L["label_confdelay_delay"] = "Verzögerung in Sekunden"
+
+L["ttt_confdelay_targetid"] = "Untersuchbar in {time} Sekunden"

@@ -9,3 +9,5 @@ L["help_confdelay_menu"] = "All Settings for Confirm Delay by @NickCloudAT"
 L["label_confdelay_enabled"] = "Enable confirm delay?"
 L["label_confdelay_dete_bypass"] = "Can detectives bypass the delay?"
 L["label_confdelay_delay"] = "Delay till players can search a corpse"
+
+L["ttt_confdelay_targetid"] = "Searchable in {time} seconds"
