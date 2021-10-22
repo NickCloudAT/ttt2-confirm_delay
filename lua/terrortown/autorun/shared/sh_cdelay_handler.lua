@@ -58,7 +58,7 @@ if CLIENT then
 	hook.Add("TTTRenderEntityInfo", "TTT2_CONFDELAY_TARGETID", function(tData)
 	local ent = tData.data.ent
 
-	if not IsValid(ent) or ent:GetClass() ~= "prop_ragdoll" then return end
+	if not IsValid(ent) or ent:GetClass() ~= "prop_ragdoll" or (LocalPlayer():GetBaseRole() == ROLE_DETECTIVE and GetConVar("ttt_confirmdelay_detective_bypass"):GetBool()) then return end
 
 	local death_time = ent:GetNWInt("ttt2_confdelay_time", 0)
 
